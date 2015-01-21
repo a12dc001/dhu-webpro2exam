@@ -10,7 +10,7 @@ class dbFactory {
 		$this->mysql_dbName = 'webpro2examdb';
 		$this->mysql_host = '127.0.0.1';
 		$this->mysql_user = 'root';
-		$this->mysql_pass = 'hanyousi';
+		$this->mysql_pass = 'pass';
 	}
 
 	function mysql_conn() {
