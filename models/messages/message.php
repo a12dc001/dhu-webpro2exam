@@ -12,8 +12,10 @@ class message {
 		$this->objDbFactory = new dbFactory();
 	}
 
-	function all() {
-		
+	function all($room_id) {
+		$conn = $this->objDbFactory->mysql_conn();
+		$result = $this->objDbFactory->select_sql($conn, 'messages', 'id='.$room_id);
+		$this->objDbFactory->mysql_disconn();
 	}
 
 	function save() {

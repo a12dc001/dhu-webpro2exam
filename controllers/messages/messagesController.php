@@ -13,7 +13,9 @@ class messagesController {
 	}
 
 	function indexAction() {
-		$this->objMessageView->render();
+		$room_id = $_GET['id'];
+		$result = $this->objMessage->all($room_id);
+		$this->objMessageView->render($result);
 	}
 
 	function newAction() {
